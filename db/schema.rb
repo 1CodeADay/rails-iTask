@@ -10,9 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_20_144357) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_21_135608) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clients", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_clients_on_user_id"
+  end
+
+  create_table "taskmen", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_taskmen_on_user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.text "description"
+    t.string "position"
+    t.string "destination"
+    t.bigint "client_id", null: false
+    t.bigint "taskman_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_tasks_on_client_id"
+    t.index ["taskman_id"], name: "index_tasks_on_taskman_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,4 +55,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_20_144357) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "clients", "users"
+  add_foreign_key "taskmen", "users"
+  add_foreign_key "tasks", "clients"
+  add_foreign_key "tasks", "taskmen"
 end
