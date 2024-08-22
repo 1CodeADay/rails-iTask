@@ -1,19 +1,19 @@
-  <div class="description" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('background.jpg') %>'); background-size: cover; height: 85vh;">
-      <h1>Add a New Task</h1>
-        <%= form_with model: @task do |f| %>
-          <%= f.label :description %>
-          <br>
-          <%= f.text_area :description %>
-          <br>
-          <%= f.label :postion %>
-          <br>
-          <%= f.text_field :position %>
-          <br>
-          <%= f.label :destination %>
-          <br>
-          <%= f.text_field :destination %>
-          <br><br>
-          <%= f.submit value="Add Task"%>
-          <br>
-        <% end %>
+<div class="description" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= asset_path('background.jpg') %>'); background-size: cover; height: 85vh;">
+  <h1>Add a New Task</h1>
+    <%= form_with model: @task do |f| %>
+      <%= f.label :description %>
+      <br>
+      <%= f.text_area :description %>
+      <br>
+      <%= f.label :postion %>
+      <br>
+      <%= f.text_field :position %>
+      <br>
+      <%= f.label :destination %>
+      <br>
+      <%= f.text_field :destination %>
+      <br><br>
+      <%= f.submit value="Add Task"%>
+      <br>
+    <% end %>
 </div>
