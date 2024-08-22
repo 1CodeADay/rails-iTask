@@ -2,7 +2,7 @@
   <div class="task-box">
   <% @tasks.each do |task| %>
     <div class="task-item">
-      <a href="/tasks/<%= task.id%>" class="task-item-link">
+      <a href="/tasks/<%= task.id %>" class="task-item-link">
         <div class="task-item-bg"></div>
         <div class="task-item-description"><%= task.description %></div>
         <div class="task-item-date">Date :
@@ -19,4 +19,3 @@
     <% end %>
   </div>
 </div>
-z
