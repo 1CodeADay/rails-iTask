@@ -7,11 +7,15 @@
 }
 
 .description {
+  background-size: cover;
+  width: 70vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 97%;
   flex-direction: column;
-  margin: 80px auto;
-  border-radius: 60px;
+  margin: 23px auto;
+  border-radius: 3%;
+  box-shadow: 0 0 10px black;
 }
