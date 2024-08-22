@@ -5,7 +5,7 @@
 
 
 body {
-  background-color: rgb(97, 97, 97);
+  background-color: rgb(243, 240, 240);
 }
 .task-box {
   display: -webkit-box;
@@ -91,6 +91,30 @@ body {
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+}
+.task-item:nth-child(2n) .task-item-bg {
+  background-color: #3ecd5e;
+}
+.task-item:nth-child(3n) .task-item-bg {
+  background-color: #e44002;
+}
+.task-item:nth-child(4n) .task-item-bg {
+  background-color: #952aff;
+}
+.task-item:nth-child(5n) .task-item-bg {
+  background-color: #cd3e94;
+}
+.task-item:nth-child(6n) .task-item-bg {
+  background-color: #4c49ea;
+}
+.task-item:nth-child(7n) .task-item-bg {
+  background-color: #00d9ff;
+}
+.task-item:nth-child(8n) .task-item-bg {
+  background-color: #73ff00;
+}
+.task-item:nth-child(9n) .task-item-bg {
+  background-color: #f93490;
 }
 
 
