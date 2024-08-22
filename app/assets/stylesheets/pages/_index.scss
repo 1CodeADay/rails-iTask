@@ -2,8 +2,6 @@
   width: 1142px;
   margin: 0 auto;
 }
-
-
 body {
   background-color: rgb(243, 240, 240);
 }
@@ -22,76 +20,85 @@ body {
 .task-item {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
   flex-basis: calc(33.33333% - 30px);
-
   margin: 0 15px 30px;
-
   overflow: hidden;
-
   border-radius: 28px;
+  box-shadow: 0 0 10px black;
 }
+
 .task-item-link {
   display: block;
   padding: 30px 20px;
-  background-color: #121212;
-
+  background-color: rgb(97,97,97);
   overflow: hidden;
-
   position: relative;
+  text-decoration: none;
+}
+
+.task-item-link:hover {
+  text-decoration: none;
 }
 .task-item-link:hover,
 .task-item-link:hover .task-item-date-day {
-  text-decoration: none;
   color: #FFF;
 }
+
+.task-item-link:hover,
+.task-item-link:hover .task-item-date {
+  color: #000000;
+}
+
+.task-item-link:hover,
+.task-item-link:hover .task-item-description {
+  color: #000000;
+}
+
 .task-item-link:hover .task-item-bg {
   -webkit-transform: scale(10);
   -ms-transform: scale(10);
   transform: scale(10);
 }
+
 .task-item-description {
   min-height: 87px;
   margin: 0 0 25px;
-
   overflow: hidden;
-
   font-weight: bold;
   font-size: 30px;
   color: #FFF;
-
   z-index: 2;
   position: relative;
 }
+
 .task-item-date {
   font-size: 18px;
   color: #FFF;
-
   z-index: 2;
   position: relative;
 }
+
 .task-item-date-day {
   font-weight: bold;
   color: #f9b234;
-
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
   transition: color .5s ease
 }
+
 .task-item-bg {
   height: 128px;
   width: 128px;
   background-color: goldenrod;
-
   z-index: 1;
   position: absolute;
   top: -75px;
   right: -75px;
-
   border-radius: 50%;
-
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
-  transition: all .5s ease;
+  transition: all 1s ease;
 }
+
 .task-item:nth-child(2n) .task-item-bg {
   background-color: #3ecd5e;
 }
@@ -111,7 +118,7 @@ body {
   background-color: #00d9ff;
 }
 .task-item:nth-child(8n) .task-item-bg {
-  background-color: #73ff00;
+  background-color: #5fd400;
 }
 .task-item:nth-child(9n) .task-item-bg {
   background-color: #f93490;
@@ -134,7 +141,6 @@ body {
   .task-container {
     width: 96%;
   }
-
 }
 @media only screen and (max-width: 639px) {
   .task-item {
@@ -144,7 +150,6 @@ body {
   .task-item-description {
     min-height: 72px;
     line-height: 1;
-
     font-size: 24px;
   }
   .task-item-link {
