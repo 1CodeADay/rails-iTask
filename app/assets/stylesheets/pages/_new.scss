@@ -1,0 +1,17 @@
+// Specific CSS for your new-page
+.description h1 {
+  color:white
+}
+.description label {
+  color:white
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  flex-direction: column;
+  margin: 80px auto;
+  border-radius: 60px;
+}
