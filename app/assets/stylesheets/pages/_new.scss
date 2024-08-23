@@ -1,21 +1,27 @@
 // Specific CSS for your new-page
 .description h1 {
-  color:white
+  color:white;
 }
 .description label {
-  color:white
+  color:white;
+  display: block;
+  text-align: center;
 }
-
 .description {
-  background-size: cover;
-  width: 70vw;
-  height: 100vh;
+  background-size: fill;
+  width: 736px;
+  height: 736px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 97%;
   flex-direction: column;
   margin: 23px auto;
-  border-radius: 3%;
+  border-radius: 15px;
   box-shadow: 0 0 10px black;
+}
+
+.btn-add {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
 }

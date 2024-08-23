@@ -14,8 +14,10 @@ before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def create
     @task = Task.new(task_params)
-    if @task.save
-      redirect_to task_path(@task)
+    @task.client_id = Client.where(user: current_user).first.id
+    @task.taskman_id = Taskman.first.id
+    if @task.save!
+      redirect_to tasks_path(@task)
     else
       render :new, status: :unprocessable_entity
     end
