@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_21_135608) do
     t.string "position"
     t.string "destination"
     t.bigint "client_id", null: false
-    t.bigint "taskman_id", null: false
+    t.bigint "taskman_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_tasks_on_client_id"
