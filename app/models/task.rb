@@ -1,8 +1,8 @@
 class Task < ApplicationRecord
   belongs_to :client
-  belongs_to :taskman
+  belongs_to :taskman, optional: true
 
   validates :description, presence: true
-  validates :position, presence: true
-  validates :destination, presence: true
+  validates :from, presence: true
+  validates :to, presence: true
 end
